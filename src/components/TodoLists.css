@@ -1,50 +1,63 @@
 .items {
-    list-style-type: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto
+  list-style-type: none;
+  padding: 0;
+  max-width: 662px;
+  margin: 0 auto;
 }
 .item {
-    background-color: rgba(255,255,255,.7);
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    overflow: hidden
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  overflow: hidden;
 }
 .main {
-    border-left: 5px solid orange;
-    padding-left: .5rem;
-    margin-left: 1rem;
-    margin-right: .5rem;
+  border-left: 5px solid orange;
+  padding-left: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
 }
 .extra {
-    margin-left: 1rem;
-    margin-top: .5rem;
-    margin-bottom: .5rem
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .category {
-    font-size: 1.125rem;
-    border-bottom: 1px solid rgb(226, 226, 226);
-    margin: .5rem 1rem
+  font-size: 1.125rem;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  margin: 0.5rem 1rem;
 }
 .title {
-
 }
 .desc {
-
 }
 .d-day {
+}
 
-}
-.text-primary {
-    color: navy
-}
 .text-overflow {
-    text-overflow: ellipsis;
-    overflow: hidden
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.text-secondary {
-    color: gray;
+/* category, color, participant 항목은 state를 추가하면서 작성할 예정 */
+.orange {
+  color: rgb(250, 180, 51);
+  border-left-color: rgb(250, 180, 51);
 }
-/* category, participant 항목은 state를 추가하면서 작성할 예정 */
+.lime {
+    color: rgb(54, 212, 54);
+    border-left-color: rgb(54, 212, 54);
+}
+.crimson {
+    color: rgb(240, 49, 87);
+    border-left-color: rgb(240, 49, 87);
+}
+.dodgerblue {
+    color: rgb(69, 158, 248);
+    border-left-color: rgb(69, 158, 248);
+}
+.chocolate {
+    color: rgb(218, 119, 48);
+    border-left-color: rgb(218, 119, 48);
+}
