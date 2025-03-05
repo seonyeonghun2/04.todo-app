@@ -1,7 +1,7 @@
 import "./TodoInput.css"
 function TodoInput({formData,onChange, onSubmit, onClick}) {
     return (
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="mx-auto">
         <fieldset>
           <legend>Todo App</legend>
           <div className="container d-flex flex-column gap-1">
