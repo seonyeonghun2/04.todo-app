@@ -15,7 +15,7 @@ function App() {
     category: 'etc',
     start: new Date().toISOString().split("T")[0],
     end: '',
-    color: 'orange',
+    color: 'cholate',
     participant: "0"
   })
 
@@ -35,7 +35,7 @@ function App() {
       end: '',
       participant: "0",
       category: 'etc',
-      color: ''
+      color: 'chocolate'
     })
   }
   function onChange(e) {
@@ -51,7 +51,6 @@ function App() {
   function onClick(e){
     // 클릭하면, .btn-active 옮겨지게 (선택한 category가 active하게 처리)
     // console.dir(e.target)
-    console.dir(e.target.dataset.color)
     setFormData(prevData => ({
       ...prevData,
       ["category"]: e.target.innerText,
