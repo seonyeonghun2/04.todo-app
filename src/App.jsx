@@ -12,8 +12,11 @@ function App() {
     id: id,
     title: '',
     desc: '',
+    category: 'etc',
     start: new Date().toISOString().split("T")[0],
-    end: ''
+    end: '',
+    color: '',
+    participant: 0
   })
 
 
@@ -29,7 +32,10 @@ function App() {
       title: '',
       desc: '',
       start: new Date().toISOString().split("T")[0],
-      end: ''
+      end: '',
+      participant: 0,
+      category: 'etc',
+      color: ''
     })
   }
   function onChange(e) {
@@ -41,10 +47,19 @@ function App() {
       [name]: value
     }))
   }
+  function onClick(e){
+    // 클릭하면, .btn-active 옮겨지게 (선택한 category가 active하게 처리)
+    // console.dir(e.target)
+    console.dir(e.target.dataset.color)
+    setFormData(prevData => ({
+      ...prevData,
+      ["category"]: e.target.innerText
+    }))
+  }
   return (
     <>
       <TodoHeader />
-      <TodoInput onChange={onChange} onSubmit={onSubmit} formData={formData} />
+      <TodoInput onChange={onChange} onClick={onClick} onSubmit={onSubmit} formData={formData} />
       <TodoLists todos={todos} />
     </>
   )
