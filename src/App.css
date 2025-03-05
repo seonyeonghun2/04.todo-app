@@ -21,6 +21,9 @@ form, .container {
 .d-flex {
   display: flex
 } 
+.d-none {
+  display: none
+}
 .flex-column {
   flex-direction: column
 }
@@ -69,4 +72,10 @@ form, .container {
 }
 .mx-auto {
   margin: 0 auto
+}
+.position-relative {
+  position: relative
+}
+.position-absolute {
+  position: absolute
 }

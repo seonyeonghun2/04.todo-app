@@ -48,6 +48,9 @@ function App() {
       [name]: value
     }))
   }
+  function onDelete(todoId){
+    setTodos(prevTodo => [prevTodo.id !== todoId])
+  }
   function onClick(e){
     // 클릭하면, .btn-active 옮겨지게 (선택한 category가 active하게 처리)
     // console.dir(e.target)
@@ -57,11 +60,14 @@ function App() {
       ["color"]: e.target.dataset.color
     }))
   }
+  function onClickMore(e){
+    e.target.previousElementSibling.classList.toggle("d-none")
+  }
   return (
     <>
       <TodoHeader />
       <TodoInput onChange={onChange} onClick={onClick} onSubmit={onSubmit} formData={formData} />
-      <TodoLists todos={todos} />
+      <TodoLists todos={todos} onClickMore={onClickMore} onDelete={onDelete} />
     </>
   )
 }
