@@ -6,38 +6,44 @@ import "./App.css"
 
 
 function App() {
-  const [idx, setIdx] = useState(0);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState("");
-  
+  const [id, setId] = useState(0);  
+  const [todos, setTodos] = useState([])
+  const [formData, setFormData] = useState({
+    title: '',
+    desc: '',
+    start: new Date().toISOString().split("T")[0],
+    end: ''
+  })
+
+
   function onSubmit(e){
     e.preventDefault();
-    // setTodos(prevTodos => [...prevTodos, {
-    //   id: idx,
-    //   subject: title,
-    //   desc: description,
-    //   start: startDate,
-    //   end: endDate
-    // }])    
+    setTodos(prevTodo => ([
+      ...prevTodo, {
+      ...formData,
+      id: id
+    }]))
+    setId(prevId => prevId + 1);
+    setFormData({
+      title: '',
+      desc: '',
+      start: new Date().toISOString().split("T")[0],
+      end: ''
+    })
   }
-  function onTitleChange(e) {
-    setTitle(e.target.value)
-  }
-  function onDescChange(e) {
-    setDescription(e.target.value)
-  }
-  function onStartDateChange(e) {
-    setStartDate(new Date())
-  }
-  function onEndDateChange(e) {
-    setEndDate(e.target.value)
+  function onChange(e) {
+    const {name, value} = e.target; // 이벤트 발생 객체의 name 속성, value 속성
+    // 각 입력값 항목에서 change 이벤트 발생(=값 변경)
+    // name을 기준으로 formData의 특정 키 값을 변경
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }))
   }
   return (
     <>
       <TodoHeader />
-      <TodoInput onTitleChange={onTitleChange} onDescChange={onDescChange} onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} onSubmit={onSubmit} title={title} description={description} startDate={startDate} endDate={endDate} />
+      <TodoInput onChange={onChange} onSubmit={onSubmit} formData={formData} />
       <TodoLists />
     </>
   )
