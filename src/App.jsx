@@ -9,6 +9,7 @@ function App() {
   const [id, setId] = useState(0);  
   const [todos, setTodos] = useState([])
   const [formData, setFormData] = useState({
+    id: id,
     title: '',
     desc: '',
     start: new Date().toISOString().split("T")[0],
@@ -44,7 +45,7 @@ function App() {
     <>
       <TodoHeader />
       <TodoInput onChange={onChange} onSubmit={onSubmit} formData={formData} />
-      <TodoLists />
+      <TodoLists todos={todos} />
     </>
   )
 }

@@ -2,7 +2,8 @@ html {
   font-size: 20px
 }
 body {
-  font-size: .8rem
+  font-size: .8rem;
+  background-color: skyblue;
 }
 fieldset {
   border: 0
