@@ -19,6 +19,11 @@
     margin-top: .5rem;
     margin-bottom: .5rem
 }
+.category {
+    font-size: 1.125rem;
+    border-bottom: 1px solid gray;
+    margin: .5rem 1rem
+}
 .title {
 
 }
