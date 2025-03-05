@@ -65,3 +65,16 @@
     color: rgb(218, 119, 48);
     border-left-color: rgb(218, 119, 48);
 }
+.more-btn {
+  right: 5%;
+  top:0%;
+  z-index: 9
+} 
+.btn-transparent {
+  background: none
+}
+.btn-group {
+  right: 5%;
+  top: 0;
+  z-index: 10
+}
