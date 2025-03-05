@@ -16,7 +16,7 @@ function App() {
     start: new Date().toISOString().split("T")[0],
     end: '',
     color: '',
-    participant: 0
+    participant: "0"
   })
 
 
@@ -33,12 +33,13 @@ function App() {
       desc: '',
       start: new Date().toISOString().split("T")[0],
       end: '',
-      participant: 0,
+      participant: "0",
       category: 'etc',
       color: ''
     })
   }
   function onChange(e) {
+    console.log(typeof e.target.value)
     const {name, value} = e.target; // 이벤트 발생 객체의 name 속성, value 속성
     // 각 입력값 항목에서 change 이벤트 발생(=값 변경)
     // name을 기준으로 formData의 특정 키 값을 변경
