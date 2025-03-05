@@ -28,12 +28,16 @@
   font-size: 1.125rem;
   border-bottom: 1px solid rgb(226, 226, 226);
   margin: 0.5rem 1rem;
+  text-transform: capitalize
 }
-.title {
+.title::first-letter {
+  font-size: 2rem
 }
 .desc {
+  text-indent: 1rem
 }
 .d-day {
+  font-style: italic
 }
 
 .text-overflow {

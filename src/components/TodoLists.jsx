@@ -19,14 +19,14 @@ function TodoLists({ todos }) {
     <ul className="items">
       {todos.map((todo) => (
         <li key={todo.id} className="item">
-          <h2 className={classNames("category", todo.color)}>{todo.category}</h2>
+          <h2 className={classNames("category",todo.color)}>{todo.category}</h2>
           <div className={classNames("main", todo.color)}>
-            <h2 className="text-primary text-overflow">{todo.title}</h2>
-            <p className="text-secondary">{todo.desc}</p>
+            <h2 className="text-primary text-overflow title">{todo.title}</h2>
+            <p className="text-secondary desc">{todo.desc}</p>
           </div>
           <div className="extra d-flex">
             <div className="d-flex gap-1">
-              <span className="d-day"><i className="bi bi-calendar-week"></i> D - {convertDday(todo)}</span>
+              <span className="d-day"><i className="bi bi-calendar-week"></i>D-{convertDday(todo)}</span>
               <span className="end-date"><i className="bi bi-pin-angle"></i> {convertDate(todo)}</span>
             </div>
             <span className="ml-1"><i className="bi bi-people"></i> {todo.participant}</span>
