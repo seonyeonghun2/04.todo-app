@@ -1,0 +1,37 @@
+.items {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto
+}
+.item {
+    background-color: rgba(255,255,255,.7);
+    border-radius: 1rem;
+    margin-bottom: 1rem
+}
+.main {
+    border-left: 5px solid orange;
+    padding-left: .5rem;
+    margin-left: 1rem
+}
+.extra {
+    margin-left: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem
+}
+.title {
+
+}
+.desc {
+
+}
+.d-day {
+
+}
+.text-primary {
+    color: navy
+}
+.text-secondary {
+    color: gray;
+}
+/* category, participant 항목은 state를 추가하면서 작성할 예정 */
