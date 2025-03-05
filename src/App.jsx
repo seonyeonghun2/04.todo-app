@@ -15,7 +15,7 @@ function App() {
     category: 'etc',
     start: new Date().toISOString().split("T")[0],
     end: '',
-    color: 'cholate',
+    color: 'chocolate',
     participant: "0"
   })
 
