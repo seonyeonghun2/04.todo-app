@@ -1,0 +1,7 @@
+.btn {
+    border-radius: 1rem;
+    font-size: .625rem
+}
+.btn-active {
+    background: linear-gradient(45deg, red, orange)
+}

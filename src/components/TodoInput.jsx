@@ -1,9 +1,17 @@
-function TodoInput({formData,onChange, onSubmit}) {
+import "./TodoInput.css"
+function TodoInput({formData,onChange, onSubmit, onClick}) {
     return (
       <form onSubmit={onSubmit}>
         <fieldset>
           <legend>Todo App</legend>
           <div className="container d-flex flex-column gap-1">
+            <div className="d-flex gap-1 justify-content-between">
+              <button type="button" onClick={onClick} className="btn btn-active text-primary" data-color="orange">free time</button>
+              <button type="button" onClick={onClick} className="btn text-primary" data-color="lime">family</button>
+              <button type="button" onClick={onClick} className="btn text-primary" data-color="crimson">meeting</button>
+              <button type="button" onClick={onClick} className="btn text-primary" data-color="dodgerblue">travel</button>
+              <button type="button" onClick={onClick} className="btn text-primary" data-color="chocolate">etc</button>
+            </div>
             <input type="text" name="title" value={formData.title} onChange={onChange} placeholder="title here" />
             <textarea rows="5" name="desc" cols="20" placeholder="add a description..." value={formData.desc} onChange={onChange}></textarea>
             <div className="d-flex gap-1 align-items-center justify-content-between">
