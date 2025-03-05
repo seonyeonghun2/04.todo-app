@@ -18,9 +18,9 @@ function TodoInput({formData,onChange, onSubmit, onClick}) {
                 <label htmlFor="start-date">시작일</label><input type="date" id="start-date" name="start" value={formData.start} onChange={onChange} className="m-0" />
                 <label htmlFor="end-date">종료일</label><input type="date" id="end-end" name="end" value={formData.end} onChange={onChange} className="m-0" />
             </div>
-            <div>
-              <label>participant</label>
-              <input type="number" name="participant" value={formData.participant} max="10" min="0" onChange={onChange} />
+            <div className="d-flex flex-column">
+              <label>인원수</label>
+              <input type="number" className="flex-1" name="participant" value={formData.participant} max="10" min="0" onChange={onChange} />
             </div>
             <input type="submit" value="등록" />
           </div>

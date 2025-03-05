@@ -15,7 +15,7 @@ function App() {
     category: 'etc',
     start: new Date().toISOString().split("T")[0],
     end: '',
-    color: '',
+    color: 'orange',
     participant: "0"
   })
 
@@ -39,7 +39,7 @@ function App() {
     })
   }
   function onChange(e) {
-    console.log(typeof e.target.value)
+    // 제목의 길이가 몇자 이상인지 (value.length 를 검사해서 alert 처리하거나)
     const {name, value} = e.target; // 이벤트 발생 객체의 name 속성, value 속성
     // 각 입력값 항목에서 change 이벤트 발생(=값 변경)
     // name을 기준으로 formData의 특정 키 값을 변경
@@ -54,7 +54,8 @@ function App() {
     console.dir(e.target.dataset.color)
     setFormData(prevData => ({
       ...prevData,
-      ["category"]: e.target.innerText
+      ["category"]: e.target.innerText,
+      ["color"]: e.target.dataset.color
     }))
   }
   return (

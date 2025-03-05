@@ -7,12 +7,16 @@
 .item {
     background-color: rgba(255,255,255,.7);
     border-radius: 1rem;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    overflow: hidden
 }
 .main {
     border-left: 5px solid orange;
     padding-left: .5rem;
-    margin-left: 1rem
+    margin-left: 1rem;
+    margin-right: .5rem;
 }
 .extra {
     margin-left: 1rem;
@@ -21,7 +25,7 @@
 }
 .category {
     font-size: 1.125rem;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(226, 226, 226);
     margin: .5rem 1rem
 }
 .title {
@@ -35,6 +39,10 @@
 }
 .text-primary {
     color: navy
+}
+.text-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden
 }
 .text-secondary {
     color: gray;

@@ -21,6 +21,9 @@ form, .container {
 } 
 .flex-column {
   flex-direction: column
+}
+.flex-1 {
+  flex: 1
 } 
 .gap-1 {
   gap: 1rem
@@ -39,6 +42,9 @@ form, .container {
 }
 .m-0 {
   margin: 0
+}
+.ml-1 {
+  margin-left: 1rem
 }
 .align-items-center{
   align-items: center;
