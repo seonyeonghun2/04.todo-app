@@ -17,6 +17,7 @@ function TodoLists({ todos }) {
     <ul className="items">
       {todos.map((todo) => (
         <li key={todo.id} className="item">
+          <h2 className="category">{todo.category}</h2>
           <div className="main">
             <h2 className="text-primary">{todo.title}</h2>
             <p className="text-secondary">{todo.desc}</p>
@@ -24,6 +25,7 @@ function TodoLists({ todos }) {
           <div className="extra">
             <span className="d-day">D - {convertDday(todo)}</span>
             <span className="end-date">{convertDate(todo)}</span>
+            <span>{todo.participant}</span>
           </div>
         </li>
       ))}
