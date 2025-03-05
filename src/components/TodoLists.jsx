@@ -1,3 +1,4 @@
+import "bootstrap-icons/font/bootstrap-icons.css"
 import "./TodoLists.css";
 function TodoLists({ todos }) {
   function convertDday(todo) {
@@ -19,13 +20,15 @@ function TodoLists({ todos }) {
         <li key={todo.id} className="item">
           <h2 className="category">{todo.category}</h2>
           <div className="main">
-            <h2 className="text-primary">{todo.title}</h2>
+            <h2 className="text-primary text-overflow">{todo.title}</h2>
             <p className="text-secondary">{todo.desc}</p>
           </div>
-          <div className="extra">
-            <span className="d-day">D - {convertDday(todo)}</span>
-            <span className="end-date">{convertDate(todo)}</span>
-            <span>{todo.participant}</span>
+          <div className="extra d-flex">
+            <div className="d-flex gap-1">
+              <span className="d-day">D - {convertDday(todo)}</span>
+              <span className="end-date">{convertDate(todo)}</span>
+            </div>
+            <span className="ml-1"><i class="bi bi-people"></i>{todo.participant}</span>
           </div>
         </li>
       ))}
