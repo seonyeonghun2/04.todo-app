@@ -12,16 +12,23 @@ function App() {
     id: id,
     title: '',
     desc: '',
-    category: 'etc',
+    category: '',
     start: new Date().toISOString().split("T")[0],
     end: '',
-    color: 'chocolate',
+    color: '',
     participant: "0"
   })
 
 
   function onSubmit(e){
     e.preventDefault();
+    // 폼 입력이 없는데, Todos가 등록되는 것을 막기
+    // 1. 폼의 required 속성 추가 ==> 필수 입력, 입력 없으면 경고처리
+    // 2. state 값이 빈값인지 조건식으로 확인 ==> 경고(alert) 처리 하거나..
+    if(formData.color === "") {
+      alert("카테고리를 선택하세요!");
+      return;
+    }
     setTodos(prevTodo => ([
       ...prevTodo, {
       ...formData,
@@ -34,8 +41,8 @@ function App() {
       start: new Date().toISOString().split("T")[0],
       end: '',
       participant: "0",
-      category: 'etc',
-      color: 'chocolate'
+      category: '',
+      color: ''
     })
   }
   function onChange(e) {
@@ -49,7 +56,7 @@ function App() {
     }))
   }
   function onDelete(todoId){
-    setTodos(prevTodos => todos.filter(todo => todo.id !== todoId))
+    setTodos(prevTodos => prevTodos.filter(todo => todo.id !== todoId))
   }
   function onClick(e){
     // 클릭하면, .btn-active 옮겨지게 (선택한 category가 active하게 처리)
