@@ -49,7 +49,7 @@ function App() {
     }))
   }
   function onDelete(todoId){
-    setTodos(prevTodo => [prevTodo.id !== todoId])
+    setTodos(prevTodos => todos.filter(todo => todo.id !== todoId))
   }
   function onClick(e){
     // 클릭하면, .btn-active 옮겨지게 (선택한 category가 active하게 처리)
