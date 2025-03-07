@@ -67,14 +67,14 @@ function App() {
       ["color"]: e.target.dataset.color
     }))
   }
-  function onClickMore(e){
-    e.target.previousElementSibling.classList.toggle("d-none")
-  }
+  // function onClickMore(e){
+  //   e.target.previousElementSibling.classList.toggle("d-none")
+  // }
   return (
     <>
       <TodoHeader />
       <TodoInput onChange={onChange} onClick={onClick} onSubmit={onSubmit} formData={formData} />
-      <TodoLists todos={todos} onClickMore={onClickMore} onDelete={onDelete} />
+      <TodoLists todos={todos} onDelete={onDelete} />
     </>
   )
 }
